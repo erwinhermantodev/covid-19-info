@@ -1,0 +1,67 @@
+.Home {
+    text-align: center;
+    padding-top: 45px;
+}
+  
+.Home-logo {
+    animation: Home-logo-spin infinite 20s linear;
+    height: 80px;
+}
+
+.Home-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+}
+
+.Home-intro {
+    font-size: large;
+}
+
+.space-carousel {
+    padding: 16px;
+    background: #DEF1E5;
+    overflow: hidden;
+}
+
+.sub-title {
+    color: #888;
+    font-size: 14px;
+    padding: 15px 0 9px 15px;
+}
+
+.not-square-grid .am-grid-icon {
+    width: 40px;
+    height: 60px;
+}
+
+.sub-title {
+    color: #888;
+    font-size: 14px;
+    padding: 15px 0 9px 15px;
+}
+
+.not-square-grid .am-grid-icon {
+    width: 40px;
+    height: 60px;
+}
+
+.sub-title .box-left{
+    width: 33%;
+    float: left;
+}
+.sub-title .box-center{
+    width: 33%;
+    float: left;
+}
+.sub-title .box-right{
+    width: 33%;
+    float: left;
+}
+
+@keyframes Home-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+  
