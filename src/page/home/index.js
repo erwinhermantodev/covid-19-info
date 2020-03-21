@@ -12,8 +12,10 @@ class Home extends Component {
         confirmedID : 0,
         recoveredID: 0,
         deathsID: 0,
+        todayCases: 0,
+        todayDeaths: 0,
         imgHeight: 176,
-    }
+    };
     componentDidMount() {
         const urlFetch = fetch('https://corona.lmao.ninja/all')
         urlFetch.then( res => {
@@ -36,6 +38,8 @@ class Home extends Component {
                 confirmedID: JSON.parse(resJson.cases),
                 recoveredID: JSON.parse(resJson.recovered),
                 deathsID: JSON.parse(resJson.deaths),
+                todayCases: JSON.parse(resJson.todayCases),
+                todayDeaths: JSON.parse(resJson.todayDeaths),
             })
         })
 
@@ -51,7 +55,7 @@ class Home extends Component {
             )
             .then(sliders => {
               this.setState({
-                sliders: sliders.data.slider
+                sliders: sliders.data.slider,
               })
             }
         );
@@ -64,7 +68,7 @@ class Home extends Component {
     }
     render() {
         const {confirmed, recovered, deaths} = this.state
-        const {confirmedID, recoveredID, deathsID} = this.state
+        const {confirmedID, recoveredID, deathsID, todayCases, todayDeaths} = this.state
         const sliders = this.state.sliders;
 
         return (
@@ -130,6 +134,18 @@ class Home extends Component {
                         <span style={{ fontSize: 'xx-large', color:'red'}}>{deathsID}</span>
                         <br/>
                         <span style={{ color:'red'}}>Meninggal</span>
+                    </div>
+                </div>
+                <div className="sub-title" style={{ marginTop: '0px', height:'100px', backgroundColor: 'white', paddingTop: '20px'}}>
+                    <div style={{width: '50%',float: 'left', height: '100%', textAlign:'center'}}>
+                        <span style={{ fontSize: 'xx-large'}}>{todayCases}</span>
+                        <br/>
+                        <span>Positive Hari Ini</span>
+                    </div>
+                    <div style={{width: '50%',float: 'left', height: '100%', textAlign:'center'}}>
+                        <span style={{ fontSize: 'xx-large', color:'red'}}>{todayDeaths}</span>
+                        <br/>
+                        <span style={{ color:'red'}}>Meninggal Hari Ini</span>
                     </div>
                 </div>
             </div>

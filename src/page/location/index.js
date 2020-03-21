@@ -15,6 +15,8 @@ class Location extends Component {
         confirmed : 0,
         recovered: 0,
         deaths: 0,
+        todayCases: 0,
+        todayDeaths: 0,
       };
     
       componentDidMount() {
@@ -39,6 +41,8 @@ class Location extends Component {
                 confirmed: JSON.parse(resJson.cases),
                 recovered: JSON.parse(resJson.recovered),
                 deaths: JSON.parse(resJson.deaths),
+                todayCases: JSON.parse(resJson.todayCases),
+                todayDeaths: JSON.parse(resJson.todayDeaths),
             })
         })
         console.log(`selected ${value}`);
@@ -57,7 +61,7 @@ class Location extends Component {
       }
     render() {
         const { data } = this.state;
-        const {confirmed, recovered, deaths} = this.state
+        const {confirmed, recovered, deaths, todayCases, todayDeaths} = this.state
 
         return (
             <div style={{ marginTop: '10px'}}>
@@ -94,6 +98,18 @@ class Location extends Component {
                         <span style={{ fontSize: 'xx-large', color:'red'}}>{deaths}</span>
                         <br/>
                         <span style={{ color:'red'}}>Meninggal</span>
+                    </div>
+                </div>
+                <div className="sub-title" style={{ marginTop: '0px', height:'100px', backgroundColor: 'white', paddingTop: '20px'}}>
+                    <div style={{width: '50%',float: 'left', height: '100%', textAlign:'center'}}>
+                        <span style={{ fontSize: 'xx-large'}}>{todayCases}</span>
+                        <br/>
+                        <span>Positive Hari Ini</span>
+                    </div>
+                    <div style={{width: '50%',float: 'left', height: '100%', textAlign:'center'}}>
+                        <span style={{ fontSize: 'xx-large', color:'red'}}>{todayDeaths}</span>
+                        <br/>
+                        <span style={{ color:'red'}}>Meninggal Hari Ini</span>
                     </div>
                 </div>
                 
