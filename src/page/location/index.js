@@ -63,7 +63,7 @@ class Location extends Component {
             <div style={{ marginTop: '10px'}}>
                 <Select
                     showSearch
-                    style={{ width: '98%' }}
+                    style={{ width: '96%' }}
                     placeholder="Select a person"
                     optionFilterProp="children"
                     onChange={this.onChange}

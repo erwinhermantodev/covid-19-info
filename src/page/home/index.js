@@ -99,17 +99,17 @@ class Home extends Component {
                 <div className="sub-title" style={{ marginTop: '5px'}}>Data Keseluruhan</div>
                 <div className="sub-title" style={{ marginTop: '5px', height:'100px', backgroundColor: 'white', paddingTop: '20px'}}>
                     <div style={{width: '33%',float: 'left', height: '100%', textAlign:'center'}}>
-                        <span style={{ fontSize: 'xx-large'}}>{confirmed}</span>
+                        <span style={{ fontSize: 'x-large'}}>{confirmed}</span>
                         <br/>
                         <span>Positive</span>
                     </div>
                     <div style={{width: '33%',float: 'left', height: '100%', textAlign:'center'}}>
-                        <span style={{ fontSize: 'xx-large', color:'green'}}>{recovered}</span>
+                        <span style={{ fontSize: 'x-large', color:'green'}}>{recovered}</span>
                         <br/>
                         <span style={{ color:'green'}}>Sembuh</span>
                     </div>
                     <div style={{width: '33%',float: 'left', height: '100%', textAlign:'center'}}>
-                        <span style={{ fontSize: 'xx-large', color:'red'}}>{deaths}</span>
+                        <span style={{ fontSize: 'x-large', color:'red'}}>{deaths}</span>
                         <br/>
                         <span style={{ color:'red'}}>Meninggal</span>
                     </div>

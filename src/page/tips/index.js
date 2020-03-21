@@ -37,7 +37,7 @@ class Tips extends Component {
                     <List.Item
                         extra={
                             <img
-                            width={272}
+                            style={{ width: '270px', margin: 'auto'}}
                             alt="logo"
                             src={item.image}
                             />
